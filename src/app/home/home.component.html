@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="text-center mb-3">My Collection of Movies</h1>
+  <div class="row">
+    <div class="col">
+      <div class="input-group mb-3" (click)="searchShows()">
+        <input [(ngModel)]="input" type="text" class="form-control" placeholder="Enter A Movie">
+        <div class="input-group-append mb-4">
+          <button class="btn btn-outline-success" type="button">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" *ngFor="let result of results">
+      <h1>{{result.Title}}</h1>
+      <img class="mb-4" src="{{result.Poster}}" alt="">
+      <button type="button" class="btn btn-primary">Add Movie</button>
+    </div>
+  </div>
+</div>
